@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Crossword</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="app">
+    <header class="top">
+      <div>
+        <h1>Neon Crossword</h1>
+        <p class="sub">Fill the grid. Click a clue to jump. ⌁</p>
+      </div>
+
+      <div class="pill">
+        <span id="statusDot" class="dot"></span>
+        <span id="statusText">Ready</span>
+      </div>
+    </header>
+
+    <section class="layout">
+      <div class="card gridCard">
+        <div class="cardHead">
+          <h2>Grid</h2>
+          <div class="actions">
+            <button id="checkBtn" class="btn primary">Check</button>
+            <button id="revealBtn" class="btn ghost">Reveal</button>
+            <button id="resetBtn" class="btn ghost">Reset</button>
+          </div>
+        </div>
+
+        <div class="gridWrap">
+          <div id="grid" class="grid" aria-label="Crossword grid"></div>
+        </div>
+      </div>
+
+      <aside class="card cluesCard">
+        <div class="tabs">
+          <button class="tab active" data-tab="across">Across</button>
+          <button class="tab" data-tab="down">Down</button>
+        </div>
+
+        <ol id="cluesAcross" class="clues active" aria-label="Across clues"></ol>
+        <ol id="cluesDown" class="clues" aria-label="Down clues"></ol>
+
+        <div class="hint">
+          <span class="kbd">Tip</span>
+          Use arrows, type letters, <span class="kbd">Backspace</span> to erase.
+        </div>
+      </aside>
+    </section>
+
+    <footer class="foot">
+      <span>Built in 3 files. No drag chaos. ✅</span>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
